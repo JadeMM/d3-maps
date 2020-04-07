@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapping with D3</title>
+    <script src="http://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+	<script src="data/boston_neighborhoods.json"></script>
+</head>
+<body>
+    <script>
+        const width = 700;
+        const height = 580;
+
+        const svg = d3.select("body")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        const g = svg.append("g");
+
+        const albersProjection = d3.geoAlbers()
+            .scale(190000)
+            .rotate([71.057,0])
+            .center([0, 42.313])
+            .translate([width/2, height/2]);
+
+        
+    </script>
+</body>
+</html>
